@@ -1,0 +1,242 @@
+<mat-toolbar>
+  <h1>
+    Expleo</h1>
+  <div>
+  </div>
+  <form [formGroup]="sampleformthree" style="margin-left:55%">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-form-field style="font-size:small; margin-right:10px;margin-top: 7px !important;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Search" [required]="false" formControlName="search">
+
+      </mat-form-field><img imgSrc="/Web/profile.jpg" class="image2">
+      <div>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-select formControlName="logout" class="select_tool" placeholder="Prashant Raut" [required]="false">
+            <ng-template ngFor let-option [ngForOf]="options" let-i="index">
+              <mat-option [value]="options[i].value">{{options[i].viewValue}}</mat-option>
+            </ng-template>
+          </mat-select>
+
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-toolbar>
+<div fxLayout="row " fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" style="height:100%" fxFlex="25" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-card style="width:100%;border-radius: 0px !important;">
+        <mat-card-title align="center">Your Profile</mat-card-title>
+
+        <img mat-card-image class="image" imgSrc="/Web/profile.jpg">
+
+        <mat-card-content align="center">
+          <h2>
+            Prashant Raut</h2>
+        </mat-card-content>
+
+        <mat-card-subtitle align="center">Software Developer</mat-card-subtitle>
+      </mat-card>
+      <div fxLayout="row wrap" class="bdr-side" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div class="count">
+          <h2>
+            86</h2><span>
+                Posts</span>
+        </div>
+        <div class="count">
+          <h2>
+            1.4K</h2><span>
+                Following</span>
+        </div>
+        <div class="count">
+          <h2>
+            4.5K</h2><span>
+                Followers</span>
+        </div>
+      </div>
+      <mat-card style="width:100%">
+        <mat-card-content class="bdr-bottom"><button mat-raised-button style="display:block; margin-bottom:10px;margin-left: 60px !important;   margin-right:60px !important;" class="btn" color="primary">Upload New Avtar</button><button mat-raised-button style="border-radius:20px !important; margin-left: 90px !important;   margin-right:60px !important;margin-bottom:10px">Delete</button></mat-card-content>
+
+        <mat-card-title style="font-size:20px; text-align:center; margin-bottom:20px">Your Design</mat-card-title>
+
+        <mat-card-subtitle>Contrary to popular belief, Lorem Ipsum is </mat-card-subtitle>
+
+        <mat-card-subtitle class="para" style="margin-top:25px">&quot;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s&quot;</mat-card-subtitle>
+
+        <img mat-card-image class="quotes" imgSrc="/Web/quotes.jpg">
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="column " class="bdr-side" fxFlex="45" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div class="txt-center bdr-bottom">
+      <h1 class="heading1">
+        Edit Your Personal Settings</h1>
+      <div fxLayout="row wrap" style="margin-left:20px; margin-top:15px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <form [formGroup]="sampleform" class="bdr-bottom">
+          <div>
+            Full Name
+            <mat-form-field style="margin-left:20px" class="input-field" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="paste your link here" [required]="false" formControlName="fullname">
+              <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*Title is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            Title
+            <mat-form-field style="margin-left:20px" class="input-field" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="paste your link here" [required]="false" formControlName="title">
+              <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*Title is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            Email
+            <mat-form-field style="margin-left:20px" class="input-field" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="paste your link here" [required]="false" formControlName="email">
+              <mat-error align="start" *ngIf="sampleform.controls.email.errors?.required">*Email is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" class="bdr-bottom" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" style="width:100%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <h2 class="heading2 txt-center">
+                Birthday</h2>
+            </div>
+            <div fxLayout="row " fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" [formGroup]="sampleform">
+              <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+                <mat-select formControlName="date" class="select" placeholder="Day" [required]="false">
+                  <ng-template ngFor let-option [ngForOf]="dates" let-i="index">
+                    <mat-option [value]="dates[i]">{{dates[i]}}</mat-option>
+                  </ng-template>
+                </mat-select>
+                <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+                <mat-select formControlName="month" class="select" placeholder="Month" [required]="false">
+                  <ng-template ngFor let-option [ngForOf]="months" let-i="index">
+                    <mat-option [value]="months[i].value">{{months[i].months}}</mat-option>
+                  </ng-template>
+                </mat-select>
+                <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+                <mat-select formControlName="year" class="select" placeholder="Year" [required]="false">
+                  <ng-template ngFor let-option [ngForOf]="years" let-i="index">
+                    <mat-option [value]="years[i]">{{years[i]}}</mat-option>
+                  </ng-template>
+                </mat-select>
+                <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="bdr-bottom" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="margin-left:20px; width:30%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <h2 class="heading2">
+                  Country<mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                    <mat-select formControlName="country" placeholder="Select Country" [required]="false">
+                      <ng-template ngFor let-option [ngForOf]="state" let-i="index">
+                        <mat-option [value]="state[i].value">{{state[i].viewValue}}</mat-option>
+                      </ng-template>
+                    </mat-select>
+                    <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+                  </mat-form-field>
+                </h2>
+              </div>
+            </div>
+            <div fxLayout="row wrap" style="margin-left:100px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <h2 class="heading2">
+                  Select City</h2>
+                <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Input" [required]="false" formControlName="city">
+                  <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="bdr-bottom" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="margin-left:40px" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <h2 class="heading2">
+                  Postal Code</h2>
+                <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Input" [required]="false" formControlName="postalcode">
+                  <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" style="margin-left:40px" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formControlName="phonenumber">
+                <h2 class="heading2">
+                  Phone Number</h2>
+                <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Input" [required]="false" formControlName="phone">
+                  <mat-error align="start" *ngIf="sampleform.controls.title.errors?.required">*this field is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="bdr-side" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="margin-left:15px" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <mat-checkbox class="checkbox" [required]="false" formControlName="check"></mat-checkbox>
+            </div>
+            <div fxLayout="row wrap" style="padding-left:10px; padding-top:2px" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="bdr-side" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="align-self:center;margin-top:30px" class="btn" color="primary" (click)="onSubmit()">Update information</button></div>
+  </div>
+  <div fxLayout="column " fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div class="txt-center bdr-bottom">
+      <h1 class="heading1">
+        Your External Links</h1>
+    </div>
+    <form [formGroup]="sampleformtwo" style="margin-left:20px">
+      <div>
+        Facebook URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="faceboock">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        Google URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="google">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        Twitter URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="tweeter">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        LinkedIn URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="linkedin">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        Website URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="website">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        youtube URL
+        <mat-form-field class="input" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="paste your link here" [required]="false" formControlName="youtube">
+          <mat-error align="start" *ngIf="sampleformtwo.controls.faceboock.errors?.required">*Link is required</mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="margin-top:60px" class="btn" color="primary" (click)="onURLSubmit()">Save &amp; Update</button></div>
+  </div>
+</div>

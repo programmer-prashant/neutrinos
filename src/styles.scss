@@ -1,0 +1,138 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+.toolbar{
+    padding-bottom: 10px;
+    background-color: white;
+}
+.image{
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50% !important;
+  border-radius: 50%;
+}
+.image2{
+  display: block !important;
+//   margin-left: auto !important;
+  margin-right: 20px !important;
+  margin-top: 7px !important;
+  width: 50px !important;
+  height: 50px !important;
+ 
+  border-radius: 50%;
+}
+
+.bdr-bottom{
+    border-bottom: 2px solid rgb(219, 217, 217);
+    width: 100%;
+}
+.bdr-side{
+    border-right: 1px solid rgb(219, 217, 217);
+    width: 100%;
+}
+.heading1{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 1rem;
+    color: rgb(129, 126, 126);
+    font-size: 1rem;
+}
+.heading2{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 1rem;
+    color: rgb(5, 5, 5);
+    font-size: .8rem;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input{
+position:relative;
+font-size: 0.7em;
+width: 90% ;
+border-width:0px !important;
+border:none !important;
+outline:none !important;
+border-radius: 50% !important;
+
+}
+
+
+
+.input-field{
+position:relative;
+font-size: 0.7em;
+width: 65% ;
+}
+
+.input-field slect{
+position:relative;
+font-size: 0.5em !important;
+width: 65% ;
+
+}
+
+.btn{
+    width:50% !important; 
+    border-radius:20px !important;
+    background-color: rgb(33, 182, 241) !important;
+}
+
+.checkbox:active{
+    background-color:rgb(20, 156, 20) !important;
+} 
+.para{
+font-family: 'Libre Baskerville', serif;
+justify-content: center;
+font-weight: 500;
+color: black;
+}
+.quotes{
+    position: relative;
+    width: 50px !important;
+  margin-left: 90px !important;
+  margin-right: auto !important;
+}
+
+.count{
+    margin: 20px;
+}
+.select{
+    margin-left: 30px;
+    width: 100px !important;
+    padding: 8px 12px;
+    border: 1px solid #9c9a9a;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+.select_tool{
+   margin-left:40px;
+    border-width:0px !important;
+    position:relative;
+    width: 65% !important;
+    font-size: .7em !important;
+    border: none !important;
+    
+}
+
+.select:hover,
+.select:focus, 
+.select:active {
+    outline: none !important;
+    border:1px solid black;
+ }
